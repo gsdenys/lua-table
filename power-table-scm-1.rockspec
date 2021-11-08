@@ -22,11 +22,16 @@ dependencies = {
 build = {
     type = "builtin",
     modules = {
-        ['ptable'] = "src/luatable.lua",
-		['ptable.assertion'] = "src/assertion.lua",
+        ['ptable'] = "src/ptable.lua",
+
+		['ptable.iterator'] = "src/iterator.lua",
+		['ptable.basics.iterator'] = "src/basics/iterations/iterator.lua",
+
+		['ptable.assertion'] = "src/basics/assertion.lua",
+		['ptable.warning'] = "src/basics/warning.lua",
 
 		['ptable.utils.types'] = "src/utils/types.lua",
 		['ptable.utils.level'] = "src/utils/level.lua",
-		['ptable.utils.error'] = "src/utils/error.lua",
+		['ptable.utils.messages'] = "src/utils/messages.lua",
     },
 }
