@@ -2,3 +2,5 @@
 **/src/tests/
 **/src/luatable-dev.lua
 **/src/luatable-emb.lua
+
+.vscode/
