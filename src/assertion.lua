@@ -1,13 +1,18 @@
-local format = string.format
-local type = type
 
 local types = require "ptable.utils.types"
 local level = require "ptable.utils.level"
 local errors = require "ptable.utils.error"
 
-local TABLE_FUNCTION_NAME = "Table"
+local format = string.format
+local type = type
 
+---Table that contains all implementation type of assertion.
+---Basically this table just contains functions
 local assertion = {}
+
+---The name of table function. I'd opt to not use reflection to make it
+---faster.
+local TABLE_FUNCTION_NAME = "Table"
 
 ---failOnAssert function that throws an exception each called time
 ---@param msg string the error message
@@ -79,4 +84,5 @@ end
 ---@param test boolean the test
 function assertion.Test(fn, msg, test) if test then sendWarning(msg, fn) end end
 
+--Export assertion table function
 return assertion
